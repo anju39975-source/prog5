@@ -1,0 +1,99 @@
+# 🛡️ SHE SHIELD – WOMEN SAFETY WEB APPLICATION
+
+---
+
+## 🚨 PROBLEM STATEMENT
+
+Women face increasing safety concerns in public and private spaces.  
+In emergency situations:
+
+- Immediate help is not easily accessible  
+- Sharing live location takes time  
+- No quick one-click alert system  
+- Delayed response increases risk  
+
+There is a need for a fast, reliable, and easy-to-use digital safety solution.
+
+---
+
+## 💡 PROJECT DESCRIPTION
+
+**She Shield** is a web-based Women Safety Application developed during a hackathon to provide instant emergency assistance.
+
+The system enables users to send real-time SOS alerts, share live GPS location, and notify emergency contacts with a single click.
+
+The main objective of this project is to reduce emergency response time and enhance women's safety using modern web technologies.
+
+---
+
+## 🔥 KEY FEATURES
+
+- 🔴 One-Click Panic Button  
+- 📍 Real-Time Location Tracking  
+- 📩 Automatic SOS Alert to Emergency Contacts  
+- 🗺️ Nearby Police Station & Hospital Finder  
+- 🔐 Secure Login & Registration  
+- 📱 Mobile Responsive Design  
+
+---
+
+## 🛠️ TECHNOLOGIES USED
+
+### Frontend
+- HTML  
+- CSS  
+- JavaScript  
+
+### Backend
+- Node.js / PHP / Python  
+
+### Database
+- MySQL / MongoDB  
+
+### APIs
+- Google Maps API  
+- SMS API  
+
+---
+
+## ⚙️ HOW IT WORKS
+
+1. User registers and logs in.  
+2. Adds trusted emergency contacts.  
+3. Clicks the Panic Button during danger.  
+4. System captures live location instantly.  
+5. SOS alert message is sent to emergency contacts.  
+6. Nearby police stations and hospitals are displayed.  
+
+---
+
+## 🚀 FUTURE ENHANCEMENTS
+
+- AI-based danger zone detection  
+- Voice-activated emergency alert  
+- Dedicated mobile application  
+- Multilingual support  
+- Direct police integration  
+
+---
+
+## ❤️ PROJECT IMPACT
+
+This application aims to:
+
+- Increase women's confidence  
+- Improve emergency response time  
+- Promote digital safety awareness  
+- Provide accessible and affordable protection  
+
+---
+
+## 👩‍💻 TEAM DETAILS
+
+Team Name:TECH TITLES
+Members: Dhanyashree G J  
+          Divya M Y
+          Bhavana J N
+          Lekha M Suresh
+  
+-
