@@ -1,0 +1,162 @@
+let latitude
+let longitude
+
+let deviceTimes={}
+let monitoring=false
+
+document.getElementById("startBtn").onclick=startMonitoring
+document.getElementById("safeBtn").onclick=stopMonitoring
+document.getElementById("unsafeBtn").onclick=notSafe
+
+
+function startMonitoring(){
+
+monitoring=true
+
+getLocation()
+
+setInterval(scanDevices,3000)
+
+}
+
+
+
+function getLocation(){
+
+navigator.geolocation.watchPosition(function(pos){
+
+latitude=pos.coords.latitude
+longitude=pos.coords.longitude
+
+document.getElementById("location").innerHTML=
+"Location: "+latitude+" , "+longitude
+
+
+document.getElementById("policeLink").href=
+"https://www.google.com/maps/search/police+station/@"+latitude+","+longitude+",15z"
+
+document.getElementById("hospitalLink").href=
+"https://www.google.com/maps/search/hospital/@"+latitude+","+longitude+",15z"
+
+})
+
+}
+
+
+
+function scanDevices(){
+
+if(!monitoring) return
+
+
+let devices=["Device1","Device2","Device3"]
+
+let detected=devices[Math.floor(Math.random()*devices.length)]
+
+let now=Date.now()
+
+
+if(!deviceTimes[detected]){
+
+deviceTimes[detected]=now
+
+}
+
+let duration=(now-deviceTimes[detected])/1000
+
+showDevice(detected,duration)
+
+
+if(duration>=15){
+
+triggerAlert()
+
+}
+
+}
+
+
+
+function showDevice(device,time){
+
+let box=document.getElementById("devices")
+
+box.innerHTML+=device+" nearby for "+Math.floor(time)+" sec<br>"
+
+box.scrollTop=box.scrollHeight
+
+}
+
+
+
+function triggerAlert(){
+
+document.getElementById("alertBox").classList.remove("hidden")
+
+sendNotification()
+
+}
+
+
+
+function sendNotification(){
+
+if(Notification.permission==="granted"){
+
+new Notification("Safety Alert",{body:"Someone might be following you"})
+
+}else{
+
+Notification.requestPermission()
+
+}
+
+}
+
+
+
+function stopMonitoring(){
+
+monitoring=false
+
+alert("Monitoring stopped")
+
+location.reload()
+
+}
+
+
+
+function notSafe(){
+
+document.getElementById("safePlaces").classList.remove("hidden")
+
+sendEmergency()
+
+}
+
+
+
+function sendEmergency(){
+
+fetch("http://localhost:3000/emergency",{
+
+method:"POST",
+
+headers:{
+
+"Content-Type":"application/json"
+
+},
+
+body:JSON.stringify({
+
+latitude:latitude,
+
+longitude:longitude
+
+})
+
+})
+
+}
