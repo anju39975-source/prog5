@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI Women Safety Monitor</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>AI Women Safety Monitoring System</h1>
+
+<button id="startBtn">Start Monitoring</button>
+
+<p id="location">Location: Not detected</p>
+
+<div id="devices"></div>
+
+<div id="alertBox" class="hidden">
+
+<h2>⚠ Someone may be following you</h2>
+
+<button id="safeBtn">YES I AM SAFE</button>
+
+<button id="unsafeBtn">NO I AM NOT SAFE</button>
+
+</div>
+
+<div id="safePlaces" class="hidden">
+
+<h3>Nearby Safety Locations</h3>
+
+<a id="policeLink" target="_blank">Police Stations</a><br>
+<a id="hospitalLink" target="_blank">Hospitals</a><br>
+
+</div>
+
+<h3>Emergency Contacts</h3>
+
+<a href="tel:100"><button>Call Police</button></a>
+
+<a href="tel:1091"><button>Women Helpline</button></a>
+
+<a href="tel:+919876543210"><button>Call Family</button></a>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
